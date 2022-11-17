@@ -23,7 +23,7 @@ def tg_bot(TOKEN):
     
     # ответ на запрос после нажатия одной из кнопки или ввода текста 
     @bot.message_handler(content_types=['text'])
-    def send_message2(message):
+    def send_message(message):
         if message.text == 'BTCUSDT':
             response = requests.get(url="https://api.binance.com/api/v3/ticker/24hr?symbol=BTCUSDT").text
             # формирование словаря
